@@ -55,7 +55,7 @@ function openMessage(e) {
 
 const main = document.querySelector(".main-section");
 main.addEventListener("click", openMessage);
-
+var startStopPause = "play";
 let minutes = 0,
     seconds = 0,
     hours = 0,
@@ -68,6 +68,9 @@ let minutes = 0,
     hour = 0,
     month = 0,
     year = 0;
+
+var fun = "fas fa-play";
+var fun2 = "start";
 
 function showIconSection() {
     clearInterval(interval);
@@ -116,7 +119,7 @@ function showIconSection() {
                                 </div>
                                 <div class="stop-icons">
                                     <i class="fas fa-redo" data-stop="redo"></i>
-                                    <div class="startStop"><i class="fas fa-play" data-stop="start"></i></div>
+                                    <div class="startStop"><i class="${fun}" data-stop="${fun2}"></i></div>
                                     <i class="fas fa-stop" data-stop="stop"></i>
                                 </div>
                             </div>                 
@@ -160,7 +163,6 @@ function increaseTime() {
     if (months >= 11) {
         years++;
     }
-    console.log(seconds);
     if (document.querySelector(".seconds") != null) {
         if (seconds < 10) {
             document.querySelector(".seconds").innerHTML = '0' + seconds;
@@ -214,9 +216,11 @@ function increaseTime() {
 
 var inter;
 const stopPausePlay = (e) => {
-    console.log(e.target.dataset.stop);
     if (e.target.dataset.stop == "start") {
+        fun = "fas fa-pause";
+        fun2 = "pause";
         document.querySelector(".startStop").innerHTML = `<i class="fas fa-pause" data-stop="pause"></i>`;
+
         if (inter) {
             clearInterval(inter);
         }
@@ -246,6 +250,8 @@ const stopPausePlay = (e) => {
         months = 0;
         years = 0;
     } else if (e.target.dataset.stop == "pause") {
+        fun = "fas fa-play";
+        fun2 = "start";
         document.querySelector(".startStop").innerHTML = `<i class="fas fa-play" data-stop="start"></i>`;
         clearInterval(inter);
         if (seconds < 10) {
