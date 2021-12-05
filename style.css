@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 50% 50%;
+}
+
+.section-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #192027;
+    color: #fff;
+}
+
+.section-1 h4 {
+    font-weight: 600;
+    font-size: 54px;
+}
+
+.section-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-2 .watch {
+    display: grid;
+    grid-template-rows: 18% 64% 18%;
+    width: 270px;
+    height: 305px;
+    background-color: #000;
+    border-radius: 70px;
+    color: #fff;
+    box-shadow: 0px 22px rgb(60, 60, 60), 0px -24px rgb(60, 60, 60);
+}
+
+.section-2 .watch-icons {
+    display: flex;
+    justify-content: space-evenly;
+    color: #fff;
+}
+
+.section-2 .watch-icons i {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.section-2 .watch-icons {
+    padding: 0 !important;
+}
+
+.section-2 .stop-icons i {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.section-2 .stop-icons {
+    display: flex;
+    justify-content: space-evenly;
+    color: #fff;
+}
+
+.section-2 .watch .watch-time p {
+    text-align: center;
+    padding-top: 8px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.iconActive {
+    opacity: 0.2;
+}
+
+.section-2 .watch .main-section .inner-main {
+    text-align: center;
+    /* margin: 0px 25px; */
+    border-radius: 30px;
+}
+
+.section-2 .watch .main-section .inner-main .inner-time {
+    transform: translateY(-20px);
+}
+
+.section-2 .watch .main-section .inner-main {
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.section-2 .watch .main-section .inner-main-message {
+    background-color: #fff;
+    color: black;
+    padding: 20px 10px;
+    text-align: justify;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.section-2 .watch .main-section .inner-main .class {
+    font-size: 1rem;
+    color: black;
+}
+
+.section-2 .watch .main-section h4 {
+    color: #fff;
+    font-weight: 500;
+    font-size: 65px;
+    padding-top: 20px;
+}
+
+.section-2 .watch .main-section .date-main {
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    font-size: 24px;
+    top: -18px;
+}
+
+.sub-stopTime {
+    margin: 0px 25px;
+    text-align: center;
+    font-size: 44px;
+    color: rgb(109, 109, 109);
+    position: relative;
+    bottom: 16px;
+}
+
+.main-stopTime {
+    margin: 0px 25px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.message-content {
+    background-color: #fff;
+    padding: 20px 20px;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    color: rgb(0, 0, 0);
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.below-Message {
+    margin-top: 10px;
+}
+
+@media screen and (max-width:1200px) {
+    .container {
+        display: grid;
+        min-height: 140vh;
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 80%;
+    }
+}
