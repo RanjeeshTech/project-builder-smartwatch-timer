@@ -286,6 +286,8 @@ const stopPausePlay = (e) => {
         }
     } else if (e.target.dataset.stop == "stop") {
         document.querySelector(".startStop").innerHTML = `<i class="fas fa-play" data-stop="start"></i>`;
+        fun = "fas fa-play";
+        fun2 = "start";
         clearInterval(inter);
         if (seconds < 10) {
             document.querySelector(".seconds").innerHTML = '0' + seconds;
